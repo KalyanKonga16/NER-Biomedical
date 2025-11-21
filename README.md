@@ -17,15 +17,6 @@ An advanced web application designed to bridge the gap between biomedical litera
 
 ---
 
-## 🚀 Visual Showcase
-
-Here is a screenshot of the BioM-NER application in action, showing both the table of detected entities and the corresponding drug recommendations from Gemini.
-
-![BioM-NER Application Screenshot](https://i.imgur.com/your-screenshot-url.png)
-_**(Note: Please replace the link above with a URL to your own screenshot for the best result.)**_
-
----
-
 ## 🔧 How It Works
 
 The application follows a simple yet powerful workflow to deliver insights:
@@ -107,3 +98,4 @@ To run this project on your local machine, follow these steps.
 2.  Either paste text directly into the text area or use the file uploader to select a `.txt`, `.pdf`, or `.docx` document.
 3.  Click the "Analyze" button.
 4.  View the results in the "Named Entities Detected" table and the "Recommended Drugs" list.
+
