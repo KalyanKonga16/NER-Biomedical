@@ -15,6 +15,10 @@ if api_key is None:
 
 genai.configure(api_key=api_key)
 
+import os
+# Check if key is loaded (do not print the actual key)
+print(f"API Key Loaded: {bool(os.getenv('GOOGLE_API_KEY'))}")
+
 # Load the BioBERT NER model
 @st.cache_resource
 def load_ner_pipeline():
@@ -53,7 +57,7 @@ def detokenize_wordpieces(tokens):
 # Function to get drug recommendations from Google Gemini
 def get_drug_recommendation(disease):
     cleaned_disease = disease.replace("-", " ").capitalize()
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("models/gemini-2.5-flash")
     response = model.generate_content(
         f"List only the drug names used to treat {cleaned_disease}, separated by commas. No explanations, just drug names."
     )
@@ -92,7 +96,7 @@ with st.sidebar:
     """)
     
     st.header("Queries?")
-    st.markdown("For any issues or suggestions, contact: severussnape01082003@gmail.com")
+    st.markdown("For any issues or suggestions, contact: kalyan.konga@gmail.com")
 
 # Tabs for text input and file upload
 tab1, tab2 = st.tabs(["Text Input", "File Upload"])
